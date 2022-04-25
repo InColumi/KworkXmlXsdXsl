@@ -1,0 +1,82 @@
+<xs:schema
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	attributeFormDefault="unqualified"
+	elementFormDefault="qualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<xs:element name ="computers" type="Computers"/>
+
+	<xs:complexType name ="Computers">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name ="computer" type="Computer"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name ="Computer">
+		<xs:sequence>
+			<xs:element name ="monitor" type="Monitor"/>
+			<xs:element name ="keyboard" type="Keyboard"/>
+			<xs:element name ="mouse" type="Mouse"/>
+			<xs:element name ="systemBlock" type="SystemBlock"/>
+
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Monitor">
+		<xs:sequence>
+			<xs:element name="width" type="xs:float" default="0.0"/>
+			<xs:element name="height" type="xs:float" default="0.0"/>
+			<xs:element name="name" type="xs:string" default="name monitor here"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Keyboard">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" default="name keyboard here"/>
+			<xs:element name="countKeys" type="xs:int" default="140"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="Mouse">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" default="name mouse here"/>
+			<xs:element name="isWireless" type="xs:boolean" default="0"/>
+			<xs:element name="countButtons" type="xs:int" default="3"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Motherboard">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" default="name motherboard here"/>
+			<xs:element name="formFactor" type="xs:string" default="name form factor here"/>
+			<xs:element name="slots" type="xs:int" default="6"/>
+			<xs:element name="connectors" type="xs:int" default="4"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="VideoCard">
+		<xs:sequence>
+			<xs:element name="cpu" type="xs:string" default="name cpu here"/>
+			<xs:element name="coreClockSpeed" type="xs:float" default="0.0"/>
+			<xs:element name="memoryType" type="xs:string" default="name memoryType here"/>
+			<xs:element name="memorySize" type="xs:int" default="4"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="InnerSystemBlock">
+		<xs:sequence>
+			<xs:element name="mtherboard" type="Motherboard"/>
+			<xs:element name="videoCard" type="VideoCard"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SystemBlock">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" default="name system block here"/>
+			<xs:element name="width" type="xs:float" default="0.0"/>
+			<xs:element name="height" type="xs:float" default="0.0"/>
+			<xs:element name="weigth" type="xs:float" default="0.0"/>
+			<xs:element name="innerSystemBlock" type="InnerSystemBlock"/>
+		</xs:sequence>
+	</xs:complexType>	
+</xs:schema>
