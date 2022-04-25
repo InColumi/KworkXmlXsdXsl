@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button_container {
+    position: fixed;
+    padding-left: 20px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    background-image: url(https://static.mk.ru/upload/entities/2022/03/22/15/articles/facebookPicture/19/73/b7/89/fd40bcdd0f6f4defbb28ec58f77ffb4a.jpg);
+    min-width: 100%;
+    height: 300px;
+}
+
+.text_container {
+    list-style: none;
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+    width: 60%;
+    border: 5px;
+    background-color: rgb(237, 248, 223);
+    font-size:x-large;
+    text-align: justify;
+    padding: 15px;
+    border-radius: 2px;
+}
+
+h1 {
+    color: rgb(2, 59, 16);
+}
+
+h4 {
+    color: rgb(2, 59, 16);
+}
+
+a {
+    padding-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 50px;
+    margin-right: 30px;
+    width: 350px;
+    height: 50px;
+    font-size: x-large;
+    background-color: rgb(112, 107, 107);
+    cursor: pointer;
+    border: none;
+    color: rgb(245, 239, 239);
+}
+
+a:hover {
+    background-color: rgb(174, 170, 170);
+    color: rgb(4, 81, 55);
+    width: 350px;
+    height: 50px;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vh;
+    background-color: rgb(237, 248, 223);
+}
+    
