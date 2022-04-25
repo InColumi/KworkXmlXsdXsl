@@ -65,7 +65,7 @@
 	
 	<xs:complexType name="InnerSystemBlock">
 		<xs:sequence>
-			<xs:element name="mtherboard" type="Motherboard"/>
+			<xs:element name="motherboard" type="Motherboard"/>
 			<xs:element name="videoCard" type="VideoCard"/>
 		</xs:sequence>
 	</xs:complexType>
