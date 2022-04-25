@@ -7,7 +7,7 @@
 	<xs:element name ="computers" type="Computers"/>
 
 	<xs:complexType name ="Computers">
-		<xs:sequence maxOccurs="unbounded">
+		<xs:sequence maxOccurs="unbounded" minOccurs="0">
 			<xs:element name ="computer" type="Computer"/>
 		</xs:sequence>
 	</xs:complexType>
