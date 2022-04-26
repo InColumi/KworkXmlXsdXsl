@@ -54,10 +54,11 @@ a {
     width: 350px;
     height: 50px;
     font-size: x-large;
-    background-color: rgb(112, 107, 107);
+    background-color: rgb(159, 155, 155);
     cursor: pointer;
     border: none;
     color: rgb(245, 239, 239);
+    
 }
 
 a:hover {
